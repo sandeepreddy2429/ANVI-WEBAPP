@@ -2,12 +2,19 @@ import { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { TbMenu } from "react-icons/tb";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { expertiseLinksList } from "../data/expertiseLinks";
 
 const MobileMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  const doNavigate = (path) => {
+    setMenuOpen(false);
+    navigate(path);
+  }
 
   const pathDetails = useLocation();
   let path = pathDetails?.pathname;
@@ -41,21 +48,19 @@ const MobileMenu = () => {
           <li
             style={activePageStyle('about')}
           >
-            <Link
-              to="/about"
+            <button type="button" onClick={() => doNavigate('about')}
               className="w-auto max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               About
-            </Link>
+            </button>
           </li>
           <li
             style={activePageStyle('solutions')}>
-            <Link
-              to="/solutions"
+            <button type="button" onClick={() => doNavigate('solutions')}
               className="w-auto max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               Solutions
-            </Link>
+            </button>
           </li>
           <li>
             <div className="relative group inline-block">
@@ -71,12 +76,11 @@ const MobileMenu = () => {
                 {Object.entries(expertiseLinksList).map(([label, path]) => (
                   <li key={path} className="w-full"
                     style={activePageStyle(label.split('-').join('').toLowerCase())}>
-                    <Link
-                      to={path}
+                    <button type="button" onClick={() => doNavigate(path)}
                       className="w-auto max-w-[50vw] min-w-max text-lg flex px-[8vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 hover:text-white text-center"
                     >
                       {label}
-                    </Link>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -84,21 +88,19 @@ const MobileMenu = () => {
           </li>
           <li
             style={activePageStyle('insights')}>
-            <Link
-              to="/insights"
+            <button type="button" onClick={() => doNavigate('insights')}
               className="w-auto max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               Insights
-            </Link>
+            </button>
           </li>
           <li
             style={activePageStyle('contact')}>
-            <Link
-              to="/contact"
+            <button type="button" onClick={() => doNavigate('contact')}
               className="w-auto max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               Contact
-            </Link>
+            </button>
           </li>
         </ul>
       </div>
