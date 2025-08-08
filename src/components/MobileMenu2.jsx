@@ -2,11 +2,12 @@ import { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { TbMenu } from "react-icons/tb";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import { expertiseLinksList } from "../data/expertiseLinks";
+import { expertisesList } from "../data/expertisesList";
 
-const MobileMenu = () => {
+const MobileMenu = (props) => {
+  const { currentPage } = props;
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -14,18 +15,14 @@ const MobileMenu = () => {
   const doNavigate = (path) => {
     setMenuOpen(false);
     navigate(path);
-  }
+  };
 
-  const pathDetails = useLocation();
-  let path = pathDetails?.pathname;
-//   console.log("path", path);
-
-  const activePageStyle = (pageName) => path === `/${pageName}`
-    ? {
-        boxShadow: "0 0 5px black inset",
-        borderBottom: "1px solid black",
+  const activePageStyle = (pageName) =>
+    currentPage === `${pageName}`
+      ? {
+          borderBottom: "1.5px solid #ccc",
         }
-    : {}
+      : {};
 
   return (
     <>
@@ -40,24 +37,27 @@ const MobileMenu = () => {
         )}
       </button>
       <div
-        className={`h-[calc(100vh-65px)] max-h-svh overflow-y-hidden bg-gray-900 w-[100%] absolute left-0 top-[65px] ${
+        className={`h-[calc(100vh-60px)] max-h-svh overflow-y-hidden bg-gray-900 w-[100%] absolute left-0 top-[65px] ${
           menuOpen ? "block" : "hidden"
         }`}
       >
-        <ul className="m-0 h-svh max-h-[calc(100vh-65px)] overflow-y-scroll px-5 pt-2 pb-0 w-full flex flex-col place-items-center justify-evenly align-middle gap-5 bg-[#00000099] text-white text-xl">
-          <li
-            style={activePageStyle('about')}
-          >
-            <button type="button" onClick={() => doNavigate('about')}
-              className="w-auto max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
+        <ul className="mobile-menu-ul m-0 h-svh max-h-[calc(100vh-65px)] overflow-y-scroll px-5 pt-2 pb-0 w-full flex flex-col place-items-center justify-evenly align-middle gap-5 bg-[#00000099] text-white text-xl">
+          <li>
+            <button
+              type="button"
+              onClick={() => doNavigate("about")}
+              style={activePageStyle("about")}
+              className="w-full max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               About
             </button>
           </li>
-          <li
-            style={activePageStyle('solutions')}>
-            <button type="button" onClick={() => doNavigate('solutions')}
-              className="w-auto max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
+          <li>
+            <button
+              type="button"
+              onClick={() => doNavigate("solutions")}
+              style={activePageStyle("solutions")}
+              className="w-full max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               Solutions
             </button>
@@ -65,7 +65,7 @@ const MobileMenu = () => {
           <li>
             <div className="relative group inline-block">
               <button
-                className="w-auto max-w-[50vw] min-w-max flex items-center px-[10vw] py-2 hover:scale-105 transition-all duration-120 text-center"
+                className="w-full max-w-[50vw] min-w-max flex items-center px-[10vw] py-2 hover:scale-105 transition-all duration-120 text-center"
                 style={{ placeItems: "center" }}
               >
                 Expertise
@@ -73,31 +73,39 @@ const MobileMenu = () => {
               </button>
 
               <ul className="absolute left-0 hidden group-hover:block expertise-links-box bg-[#000] min-w-max max-w-[300px] shadow-md p-0 m-0 z-10">
-                {Object.entries(expertiseLinksList).map(([label, path]) => (
-                  <li key={path} className="w-full"
-                    style={activePageStyle(label.split('-').join('').toLowerCase())}>
-                    <button type="button" onClick={() => doNavigate(path)}
-                      className="w-auto max-w-[50vw] min-w-max text-lg flex px-[8vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 hover:text-white text-center"
+                {expertisesList.map((each) => (
+                  <li key={each.label} className="w-full">
+                    <button
+                      type="button"
+                      onClick={() => doNavigate(each.url)}
+                      style={activePageStyle(
+                        each.label.split("-").join("").toLowerCase()
+                      )}
+                      className="w-full max-w-[50vw] min-w-max text-lg flex px-[8vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 hover:text-white text-center"
                     >
-                      {label}
+                      {each.label}
                     </button>
                   </li>
                 ))}
               </ul>
             </div>
           </li>
-          <li
-            style={activePageStyle('insights')}>
-            <button type="button" onClick={() => doNavigate('insights')}
-              className="w-auto max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
+          <li>
+            <button
+              type="button"
+              onClick={() => doNavigate("insights")}
+              style={activePageStyle("insights")}
+              className="w-full max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               Insights
             </button>
           </li>
-          <li
-            style={activePageStyle('contact')}>
-            <button type="button" onClick={() => doNavigate('contact')}
-              className="w-auto max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
+          <li>
+            <button
+              type="button"
+              onClick={() => doNavigate("contact")}
+              style={activePageStyle("contact")}
+              className="w-full max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               Contact
             </button>
