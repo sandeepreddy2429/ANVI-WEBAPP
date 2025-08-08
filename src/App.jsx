@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main>
+      <main className="h-[calc(100vh-60px)] w-screen bg-white">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
