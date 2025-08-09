@@ -9,6 +9,9 @@ import Robotics from './pages/Expertise/Robotics';
 import Space from './pages/Expertise/Space';
 import Semiconductors from './pages/Expertise/Semiconductors';
 import Entertainment from './pages/Expertise/Entertainment';
+import Textiles from './pages/Expertise/Textiles';
+import NotFound from './pages/Notfound';
+ 
 
 
 function App() {

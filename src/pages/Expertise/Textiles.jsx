@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Texttiles() {
+export default function Textiles() {
   return (
     <div>
       
