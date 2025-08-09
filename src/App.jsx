@@ -5,7 +5,7 @@ import Solution from "./pages/Solution.Jsx";
 import Insights from "./pages/Insights";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import NotFound from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 import Robotics from "./pages/Expertise/Robotics";
 import Space from "./pages/Expertise/Space";

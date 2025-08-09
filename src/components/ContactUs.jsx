@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { MdOutlineErrorOutline } from "react-icons/md";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'
 
 export default function ContactUs() {
     const [formData, setFormData] = useState({
@@ -131,14 +133,16 @@ export default function ContactUs() {
                                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                                     Phone
                                 </label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleChange}
+                                <PhoneInput
+                                    country={'in'}
+                                    enableSearch={true}
                                     placeholder="Phone"
-                                    className="mt-1 block w-full border border-gray-300 p-2 placeholder-gray-400"
+                                    buttonClass="!bg-red !border-none"
+                                    dropdownClass="!text-sm"
+                                    containerClass="!w-full"
+                                    inputStyle={{ width: '100%' }}
+                                    className="mt-1 block w-full border border-gray-300 hover:outline-[1.5px] rounded-sm placeholder-gray-400"
+
                                 />
                             </div>
                         </div>

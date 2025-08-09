@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const InnovateCard = (props) => {
   const { innovateInfo } = props;
-//   console.log(expertiseInfo);
+//   console.log(innovateInfo);
   const { heading, desc, img_url } = innovateInfo;
 
   return (
@@ -13,7 +13,7 @@ const InnovateCard = (props) => {
                 {heading}
             </h5>
             <p className="text-sm text-green-50">{desc}</p>
-            <Link className="text-black text-sm bg-gray-50 py-1 px-3 rounded-xl self-end m-2" to={heading === 'Aniv Studios' ? 'entertainment' : heading.split(' ')[1].toLowerCase()}>Learn More</Link>
+            <Link className="text-black text-sm bg-gray-50 py-1 px-3 rounded-xl self-end m-2" to={heading === 'Anvi Studios' ? 'entertainment' : heading.split(' ')[1].toLowerCase()}>Learn More</Link>
         </div>
     </li>
   );
