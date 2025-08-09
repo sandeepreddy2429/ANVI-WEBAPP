@@ -7,7 +7,7 @@ export const innovateList = [
   },
   {
     heading: "Anvi Studios",
-    desc: "",
+    desc: `Immersive stories, limitless creativity.`,
     img_url:
       "https://static.wixstatic.com/media/7ab3a8_d0efc565bd3b404c854397d5c20fc671~mv2.jpeg/v1/fill/w_411,h_564,fp_0.50_0.63,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Evox.jpeg",
   },

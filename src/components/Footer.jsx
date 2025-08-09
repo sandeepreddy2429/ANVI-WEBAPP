@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
+import { FaChevronDown } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 max-md:gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-md:gap-8">
         {/* Navigation Links */}
         <div className="space-y-2 text-sm text-left">
           <Link to="/about" className="block hover:underline">
@@ -25,12 +26,12 @@ export default function Footer() {
 
           {/* Expertise Dropdown */}
           <Menu as="div" className="">
-            <MenuButton className="" style={{ backgroundColor: "transprent" }}>
+            <MenuButton className="flex justify-center outline-0 border-0 align-middle place-items-center gap-1" style={{ backgroundColor: "transprent" }}>
               <Link>Expertise</Link>{" "}
-              <span className="text-gray-900">&#8964;</span>
+              <FaChevronDown size={10} color="black" />
             </MenuButton>
 
-            <MenuItems className=" ">
+            <MenuItems className="border-0">
               <div className="">
                 {[
                   { label: "Robotics", to: "/robotics" },
@@ -44,7 +45,7 @@ export default function Footer() {
                     {({ active }) => (
                       <Link
                         to={item.to}
-                        className={`block px-4 py-2  ${
+                        className={`block px-4 py-2 border-0  ${
                           active ? "bg-gray-200" : ""
                         }`}
                       >

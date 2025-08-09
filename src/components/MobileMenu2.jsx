@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { TbMenu } from "react-icons/tb";
@@ -17,6 +17,16 @@ const MobileMenu = (props) => {
     navigate(path);
   };
 
+  useEffect(() => {
+  if (menuOpen) {
+    document.body.style.height = "100vh";
+    document.body.style.overflow = "hidden"; // prevent scrolling
+  } else {
+    document.body.style.height = "";
+    document.body.style.overflow = "";
+  }
+}, [menuOpen]);
+
   const activePageStyle = (pageName) =>
     currentPage === `${pageName}`
       ? {
@@ -28,7 +38,7 @@ const MobileMenu = (props) => {
     <>
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="cursor-pointer p-2 hover:bg-gray-50 transition-all dura-100 rounded-md"
+        className="cursor-pointer p-2 hover:bg-gray-50 transition-all dura-100 rounded-md z-9"
       >
         {!menuOpen ? (
           <TbMenu size={30} style={{ fontWeight: "thin" }} color="black" />
@@ -37,7 +47,7 @@ const MobileMenu = (props) => {
         )}
       </button>
       <div
-        className={`h-[calc(100vh-60px)] max-h-svh overflow-y-hidden bg-gray-900 w-[100%] absolute left-0 top-[65px] ${
+        className={`h[calc(100vh-60px)] h-dvh overflow-y-hidden bg-gray-900 w-[100%] fixed z-10 left-0 top-[60px] ${
           menuOpen ? "block" : "hidden"
         }`}
       >

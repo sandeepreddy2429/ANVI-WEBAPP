@@ -5,7 +5,7 @@
 }
 body{
   width: 100%;
-  min-height: 100vh;
+  min-height: 100lvh;
   overflow-x: hidden;
   overflow-y: auto;
   margin: 0;
@@ -38,4 +38,17 @@ body::-webkit-scrollbar-track,
 a{
     color: #000;
     text-decoration: none;
+}
+
+
+.innovateCard:hover{
+  .innovateCardBox{
+    /* display: none; */
+    position: absolute;
+    aspect-ratio: 3/4;
+    top: 50%;
+    left: 50%;
+    justify-content: space-between;
+    transform: translate(-50%,-50%);
+  }
 }

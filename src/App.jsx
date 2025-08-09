@@ -13,12 +13,13 @@ import Semiconductors from "./pages/Expertise/Semiconductors";
 import Entertainment from "./pages/Expertise/Entertainment";
 import Textiles from "./pages/Expertise/Textiles";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
       <Header />
-      <main className="h-[calc(100vh-60px)] w-screen bg-white">
+      <main className="min-h-[calc(100vh-60px)] w-screen bg-white">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -38,6 +39,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 }
