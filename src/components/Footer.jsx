@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Menu,MenuButton,MenuItems,MenuItem } from '@headlessui/react';
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 
 export default function Footer() {
     return (
         <footer className="bg-gray-50 text-white py-10 px-6 md:px-20">
-    
-                <div className="flex justify-center md:justify-start max-w-[900px] w-full pb-3">
-                    <img src="https://static.wixstatic.com/media/261091_3dffa092b24a49678092350d6dab657b~mv2.png/v1/fill/w_1220,h_280,fp_0.50_0.48,q_85,enc_avif,quality_auto/anvi%20logo%20new_edited.png" alt="Anvi Logo" className="w-fit" />
-                </div>
-        
+
+            <div className="flex justify-center md:justify-start max-w-[900px] w-full pb-3">
+                <img src="https://static.wixstatic.com/media/261091_3dffa092b24a49678092350d6dab657b~mv2.png/v1/fill/w_1220,h_280,fp_0.50_0.48,q_85,enc_avif,quality_auto/anvi%20logo%20new_edited.png" alt="Anvi Logo" className="w-fit" />
+            </div>
+
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 max-md:gap-8">
 
