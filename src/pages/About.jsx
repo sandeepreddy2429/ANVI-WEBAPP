@@ -1,82 +1,82 @@
 import React from 'react'
 
 import Footer from '../components/Footer'
+import ContactUs from '../components/ContactUs'
 
 
 export default function About() {
   return (
-    <main>
+    <>
       <section>
-        <div>
-          <img src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" alt="" />
-
-        </div>
-
-      </section>
-      <section className='bg-[#f4f4f4] p-5'>
-        <div className="border-t-2 border-gray-300 mt-10 p-3 pt-8 w-[90%] mx-auto flex flex-row items-center justify-start">
-
-          <div className='self-start max-w-[50%] w-[50%]'>
-            <b className='text-8xl ' > Our Story</b>
-          </div>
-          <div className='text-gray-900 max-w-[50%]  space-y-5  m-10 w-[50%] p-10 text-2xl-sm '>
-
-            <b className='font-light'>➤ABOUT ANVI</b>
-
-            <p >
-
-              For too long, the future has been imagined in fragments — one breakthrough in
-              isolation, one innovation at a time. But in a world as interconnected as ours, true
-              transformation comes from convergence. That’s where Anvi begins.</p>
-
-            <p>We are building a future where technology and humanity evolve together — where machines feel natural, stories inspire healing, power flows cleanly, and design uplifts everyday life.</p>
-            <p>From labs and clean rooms to design studios and orbit, we are engineering for a tomorrow where innovation doesn’t just serve — it elevates.
-
-              This is the beginning of a new civilization.</p>
-            <img src="https://static.wixstatic.com/media/561197a90e6d4a6bb1cf92609952eb46.jpg/v1/fill/w_611,h_408,fp_0.43_0.39,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/In%20a%20Meeting.jpg" alt="" />
-          </div>
-
-
-        </div>
-
-
-        <div>
-
-        </div>
+        <img src="https://static.wixstatic.com/media/7ab3a8_a81f515e03634af2b9b5780ce6cf45e8~mv2.png/v1/fill/w_1891,h_739,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/7ab3a8_a81f515e03634af2b9b5780ce6cf45e8~mv2.png" alt="" />
       </section>
 
-      <section className='bg-[#f4f4f4] p-5'>
-        <div className="border-t-2 border-gray-300 mt-10 p-3 pt-8 w-[90%] mx-auto flex flex-row items-center justify-start">
+      <section className="bg-[#f4f4f4] p-5">
+        <div className="border-t-2 relative border-gray-300 mt-10 p-3 pt-8 w-full max-md:mx-0 flex flex-col md:flex-row items-start justify-start gap-6">
 
-          <div className='self-start max-w-[50%] w-[50%]'>
-            <b className='text-6xl ' > We build for people</b>
+          {/* Left Side Heading */}
+          <div className="max-w-full md:max-w-[50%] w-full sticky top-0">
+            <b className="text-4xl md:text-8xl block">Our Story</b>
           </div>
-          <div className='text-gray-900 max-w-[50%]  m-10 w-[50%] p-10 text-2xl-sm flex flex-col gap-0'>
 
-            <b className='mb-4  font-light text-gray-950 f' >➤ WHO WE ARE</b>
+          {/* Right Side Content */}
+          <div className="text-gray-900 max-w-full md:max-w-[50%] space-y-5 w-full md:m-10 md:p-10 text-lg md:text-xl">
+            <b className="block mt-5">➤ ABOUT ANVI</b>
 
-            <p className='mb-4'>
-              Founded by a team of visionary leaders, scientists, creators, and engineers
-              — including doctors, technologists, and entrepreneurs — Anvi stands as a multi-domain innovation
-              powerhouse. Our mission is to design transformational products and platforms that solve real-world problems
-              while setting new global benchmarks in quality, ethics, and imagination</p>
-            <b className='mb-4   font-light'>➤OUR VISION</b>
-            <p className='font-semibold'>“To engineer the next civilization—intelligently, ethically, beautifully.” </p>
-            <p>We are not here to fit into the future.</p>
-            <p>We are here to build it.
+            <p>
+              For too long, the future has been imagined in fragments — one breakthrough in isolation,
+              one innovation at a time. But in a world as interconnected as ours, true transformation
+              comes from convergence. That’s where Anvi begins.
             </p>
 
+            <p>
+              We are building a future where technology and humanity evolve together — where machines feel
+              natural, stories inspire healing, power flows cleanly, and design uplifts everyday life.
+            </p>
 
+            <p>
+              From labs and clean rooms to design studios and orbit, we are engineering for a tomorrow
+              where innovation doesn’t just serve — it elevates. This is the beginning of a new
+              civilization.
+            </p>
 
+            <img
+              src="https://static.wixstatic.com/media/561197a90e6d4a6bb1cf92609952eb46.jpg/v1/fill/w_611,h_408,fp_0.43_0.39,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/In%20a%20Meeting.jpg"
+              alt="In a Meeting"
+              className="rounded-lg w-full h-auto"
+            />
           </div>
-
-
-        </div>
-
-        <div>
-
         </div>
       </section>
+
+      <section className="bg-[#f4f4f4] p-5">
+        <div className="border-t-2 relative  border-gray-300 mt-10 p-3 pt-8  w-full max-md:mx-0 flex flex-col md:flex-row items-start justify-start gap-6">
+
+          {/* Left Side Heading */}
+          <div className="max-w-full md:max-w-[50%] w-full sticky top-0">
+            <b className="text-3xl md:text-6xl block">We build for people</b>
+          </div>
+
+          {/* Right Side Content */}
+          <div className="text-gray-900 max-w-full md:max-w-[50%] w-full md:m-10 md:p-10 text-lg md:text-xl flex flex-col gap-4">
+            <b className="font-light text-gray-950">➤ WHO WE ARE</b>
+            <p>
+              Founded by a team of visionary leaders, scientists, creators, and engineers — including
+              doctors, technologists, and entrepreneurs — Anvi stands as a multi-domain innovation
+              powerhouse. Our mission is to design transformational products and platforms that solve
+              real-world problems while setting new global benchmarks in quality, ethics, and imagination.
+            </p>
+
+            <b className="font-light">➤ OUR VISION</b>
+            <p className="font-semibold">
+              “To engineer the next civilization—intelligently, ethically, beautifully.”
+            </p>
+            <p>We are not here to fit into the future.</p>
+            <p>We are here to build it.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-black text-white px-6 md:px-20 py-20 rounded-t-[60px]">
         {/* Main Title */}
         <h2 className="text-4xl md:text-4xl font-extrabold text-start mb-20 leading-tight">
@@ -119,11 +119,7 @@ export default function About() {
         </div>
       </section>
 
-      <Footer />
-
-
-
-
-    </main>
+      <ContactUs />
+    </>
   )
 }
