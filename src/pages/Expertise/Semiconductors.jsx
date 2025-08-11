@@ -4,15 +4,11 @@ import ContactUs from '../../components/ContactUs'
 export default function Semiconductors() {
   return (
     <>
-      <section>
+      <section className='relative w-full bg-cover bg-center'>
         <div className='w-full h-full'>
           <img className='object-cover' src="https://static.wixstatic.com/media/7ab3a8_5061f2ff84e74c19ab40ccc098b79c2f~mv2.png/v1/fill/w_1891,h_823,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/7ab3a8_5061f2ff84e74c19ab40ccc098b79c2f~mv2.png" alt="" />
         </div>
-      </section>
-
-      <section className="relative w-full max-h-[80vh] min-h-[400px] bg-cover bg-center">
-
-        <div className="absolute inset-0 flex flex-col justify-center items-start  px-4 sm:px-12">
+         <div className="absolute inset-0 flex flex-col justify-center items-start  px-4 sm:px-12">
           <h1 className="text-white sm:text-5xl font-bold mb-2">
             Semi-conductors
           </h1>
@@ -23,6 +19,7 @@ export default function Semiconductors() {
           </p>
         </div>
       </section>
+ 
 
       <section>
         <div className="max-w-7xl mx-auto px-4 py-12">
