@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import ContactUs from "../../components/ContactUs";
 const dimage = "https://static.wixstatic.com/media/7ab3a8_765b93a9d6f242aa8fabada6b50dc97f~mv2.png/v1/fill/w_2217,h_965,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/2.png"
-const nimage = "https://static.wixstatic.com/media/7ab3a8_765b93a9d6f242aa8fabada6b50dc97f~mv2.png/v1/fill/w_726,h_1262,fp_0.26_0.50,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/2.png"
+// const nimage = "https://static.wixstatic.com/media/7ab3a8_765b93a9d6f242aa8fabada6b50dc97f~mv2.png/v1/fill/w_726,h_1262,fp_0.26_0.50,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/2.png"
 const roboimg1 = "https://static.wixstatic.com/media/7ab3a8_9870ef81d0a844389091202dcd53f7da~mv2.png/v1/fill/w_891,h_1050,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Copy%20of%20Anvi%20Surveillance%20Robot%20(LinkedIn%20Post).png"
 const roboimg2 = "https://static.wixstatic.com/media/c837a6_650c3d880f99434dbc32154c5c9fe2cd~mv2.jpg/v1/fill/w_768,h_1062,fp_0.58_0.42,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/possessed-photography-g29arbbvPjo-unsplash_edited.jpg"
 const roboimg3 = "https://static.wixstatic.com/media/baac51_c5b56ac2d6804af581a4ab3c889961c2~mv2.jpg/v1/fill/w_855,h_1053,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Light%20-%20Item%20image%204.jpg"

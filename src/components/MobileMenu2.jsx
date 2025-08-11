@@ -5,6 +5,7 @@ import { TbMenu } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 
 import { expertisesList } from "../data/expertisesList";
+import pagesLinks from "../data/pagesLinks";
 
 const MobileMenu = (props) => {
   const { currentPage } = props;
@@ -18,14 +19,14 @@ const MobileMenu = (props) => {
   };
 
   useEffect(() => {
-  if (menuOpen) {
-    document.body.style.height = "100vh";
-    document.body.style.overflow = "hidden"; // prevent scrolling
-  } else {
-    document.body.style.height = "";
-    document.body.style.overflow = "";
-  }
-}, [menuOpen]);
+    if (menuOpen) {
+      document.body.style.height = "100vh";
+      document.body.style.overflow = "hidden"; // prevent scrolling
+    } else {
+      document.body.style.height = "";
+      document.body.style.overflow = "";
+    }
+  }, [menuOpen]);
 
   const activePageStyle = (pageName) =>
     currentPage === `${pageName}`
@@ -55,8 +56,8 @@ const MobileMenu = (props) => {
           <li>
             <button
               type="button"
-              onClick={() => doNavigate("about")}
-              style={activePageStyle("about")}
+              onClick={() => doNavigate(pagesLinks.about)}
+              style={activePageStyle(pagesLinks.about)}
               className="w-full max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               About
@@ -65,8 +66,8 @@ const MobileMenu = (props) => {
           <li>
             <button
               type="button"
-              onClick={() => doNavigate("solutions")}
-              style={activePageStyle("solutions")}
+              onClick={() => doNavigate(pagesLinks.solutions)}
+              style={activePageStyle(pagesLinks.solutions)}
               className="w-full max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               Solutions
@@ -103,8 +104,8 @@ const MobileMenu = (props) => {
           <li>
             <button
               type="button"
-              onClick={() => doNavigate("insights")}
-              style={activePageStyle("insights")}
+              onClick={() => doNavigate(pagesLinks.insights)}
+              style={activePageStyle(pagesLinks.insights)}
               className="w-full max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               Insights
@@ -113,8 +114,8 @@ const MobileMenu = (props) => {
           <li>
             <button
               type="button"
-              onClick={() => doNavigate("contact")}
-              style={activePageStyle("contact")}
+              onClick={() => doNavigate(pagesLinks.contact)}
+              style={activePageStyle(pagesLinks.contact)}
               className="w-full max-w-[50vw] min-w-max flex px-[10vw] py-2 hover:scale-105 transition-all duration-120 hover:bg-gray-900 hover:skew-2 text-center"
             >
               Contact

@@ -1,123 +1,140 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
-import { FaChevronDown } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import pagesLinks from "../data/pagesLinks";
+import { expertisesList } from "../data/expertisesList";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoMailOutline } from "react-icons/io5";
 
 export default function Footer() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <footer className="bg-gray-50 text-white py-10 px-6 md:px-20">
-      <div className="flex justify-center md:justify-start max-w-[900px] w-full pb-3">
+    <footer className="bg-gray-50 text-white pt-10 pb-13 px-6 md:px-20 max-sm:px-5">
+      <div className="flex justify-center md:justify-start max-w-[900px] w-full pb-8">
         <img
           src="https://static.wixstatic.com/media/261091_3dffa092b24a49678092350d6dab657b~mv2.png/v1/fill/w_1220,h_280,fp_0.50_0.48,q_85,enc_avif,quality_auto/anvi%20logo%20new_edited.png"
           alt="Anvi Logo"
-          className="w-fit"
+          className="w-full max-w-lg"
         />
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-md:gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-md:gap-8 max-sm:gap-x-3 max-sm:gap-y-10">
         {/* Navigation Links */}
-        <div className="space-y-2 text-sm text-left">
-          <Link to="/about" className="block hover:underline">
-            About
-          </Link>
-          <Link to="/solutions" className="block hover:underline">
-            Solutions
-          </Link>
+        <div className="space-y-2 text-sm text-left flex flex-col gap-0.5">
+          <Link to={pagesLinks.about}>About</Link>
+          <Link to={pagesLinks.solutions}>Solutions</Link>
 
           {/* Expertise Dropdown */}
-          <Menu as="div" className="">
-            <MenuButton className="flex justify-center outline-0 border-0 align-middle place-items-center gap-1" style={{ backgroundColor: "transprent" }}>
-              <Link>Expertise</Link>{" "}
-              <FaChevronDown size={10} color="black" />
-            </MenuButton>
+          <span className="relative">
+            <button
+              type="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+              className=" text-black flex cursor-pointer justify-center outline-0 border-0 align-middle place-items-center gap-1"
+              style={{ backgroundColor: "transparent" }}
+            >
+              Expertise
+              {menuOpen ? (
+                <FaChevronUp size={10} color="black" />
+              ) : (
+                <FaChevronDown size={10} color="black" />
+              )}
+            </button>
 
-            <MenuItems className="border-0">
-              <div className="">
-                {[
-                  { label: "Robotics", to: "/robotics" },
-                  { label: "Space", to: "/space" },
-                  { label: "Textiles", to: "/textiles" },
-                  { label: "Semi-Conductors", to: "/semiconductors" },
-                  { label: "Entertainment", to: "/entertainment" },
-                  { label: "Life Sciences", to: "/life-sciences" },
-                ].map((item) => (
-                  <MenuItem key={item.to}>
-                    {({ active }) => (
-                      <Link
-                        to={item.to}
-                        className={`block px-4 py-2 border-0  ${
-                          active ? "bg-gray-200" : ""
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
-                    )}
-                  </MenuItem>
+            <div
+              className={`border-0 max-h-[250px] overflow-y-auto transition-all duration-150 absolute top-5 }`}
+            >
+              <ul
+                className={`bg-gray-100 w-full ${
+                  menuOpen ? "h-auto" : "h-0"
+                } transition-all duration-350`}
+              >
+                {expertisesList.map((item) => (
+                  <li key={item.url}>
+                    <Link
+                      to={item.url}
+                      className={`block px-4 py-2 border-0 text-black`}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
                 ))}
-              </div>
-            </MenuItems>
-          </Menu>
+              </ul>
+            </div>
+          </span>
 
-          <Link to="/insights" className="block hover:underline">
-            Insights
-          </Link>
-          <Link to="/contact" className="block hover:underline">
-            Contact
-          </Link>
+          <Link to={pagesLinks.insights}>Insights</Link>
+          <Link to={pagesLinks.contact}>Contact</Link>
         </div>
         <section className="text-sm space-y-2">
-          {" "}
           {/* Address */}
-          <div className="text-sm space-y-2  text-gray-900  text-left ">
-            <div>Profound Builders,</div>
-            <div>Whitefields, Kondapur,</div>
-            <div>Telangana 500081</div>
+          <div className="text-sm space-y-2 flex flex-col gap-0.5 text-gray-900 text-left">
             <a
-              href="mailto:info@anvi.co"
-              className="block text-blue-600 hover:underline"
+              href={`${pagesLinks.location}`}
+              target="_blank"
+              className="flex justify-start align-middle gap-2 transition-all hover:scale-105"
             >
-              info@anvi.co
+              <FaLocationDot size={20} color="#333" />
+              <span>
+                Profound Builders, <br />
+                Whitefields, Kondapur,
+                <br />
+                Telangana 500081
+              </span>
+            </a>
+            <a
+              href={`mailto:${pagesLinks.mailid}`}
+              className="flex justify-start align-middle gap-2 transition-all hover:scale-105"
+            >
+              <IoMailOutline size={20} color="#000" /> {pagesLinks.mailid}
             </a>
           </div>
         </section>
 
         {/* Social Links */}
-        <div className="text-sm space-y-2">
+        <div className="text-sm space-y-5 flex flex-col gap-0.5">
           <a
-            href=""
+            href={pagesLinks.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="block hover:underline"
+            className="flex justify-start align-middle gap-2 transition-all hover:scale-105"
           >
+            <FaLinkedinIn size={20} color="#333" />
             LinkedIn
           </a>
           <a
-            href=""
+            href={pagesLinks.instagram}
             target="_blank"
             rel="noreferrer"
-            className="block hover:underline"
+            className="flex justify-start align-middle gap-2 transition-all hover:scale-105"
           >
+            <FaInstagram size={20} className="aspect-square" color="#333" />
             Instagram
           </a>
           <a
-            href=""
+            href={pagesLinks.facebook}
             target="_blank"
             rel="noreferrer"
-            className="block hover:underline"
+            className="flex justify-start align-middle gap-2 transition-all hover:scale-105"
           >
+            <FaFacebook size={20} className="aspect-square" color="#333" />
             Facebook
           </a>
         </div>
 
         <div className="text-sm space-y-2 text-left ">
-          <Link to="/privacy-policy" className="block hover:underline ">
-            Privacy Policy
-          </Link>
+          <Link to={pagesLinks.privacypolicy}>Privacy Policy</Link>
           {/* Footer Bottom */}
         </div>
       </div>
       <div className="text-center text-xs text-gray-500 mt-4">
-        &copy;2025 Anvi.co
+        &copy; 2025 Anvi.co
       </div>
     </footer>
   );

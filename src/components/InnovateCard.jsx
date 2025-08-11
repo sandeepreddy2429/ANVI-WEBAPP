@@ -6,9 +6,9 @@ const InnovateCard = (props) => {
   const { heading, desc, img_url } = innovateInfo;
 
   return (
-    <li className="innovateCard w-full max-w-[350px] place-items-start self-center aspect-[3/4] relative rounded-xl hover:scale-105 hover:shadow-lg hover:shadow-gray-600 b-[#00000030] transition-all duration-150 flex flex-col justify-end">
+    <li className="innovateCard w-full max-w-[300px] place-items-start self-center aspect-[3/4] relative rounded-xl hover:scale-105 hover:shadow-lg hover:shadow-gray-600 b-[#00000030] transition-all duration-150 flex flex-col justify-end">
         <img src={img_url} alt={heading} className="aspect-[3/4] w-full absolute top-0 rounded-lg"/>
-        <div className="innovateCardBox p-2 w-full flex flex-col justify-start align-middle static z-1 transition-all duration-120">
+        <div className="innovateCardBox p-2 w-full flex flex-col justify-start align-middle static z-1 transition-all duration-300">
             <h5 className="text-md w-auto font-bold text-white border-b-3 border-gray-50 m-2 has-[expertise-card:hover]:text-shadow-2xl text-shadow-gray-800">
                 {heading}
             </h5>

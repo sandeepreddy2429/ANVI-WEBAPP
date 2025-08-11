@@ -68,7 +68,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="w-full bg-gray-100 md:p-16 max-p-8 mx-auto py-10 px-10 sticky">
+    <section className="w-full bg-gray-100 md:p-16 max-p-8 mx-auto px-6 py-10 sticky">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
         {/* Left Side - Text */}
         <div className="md:w-1/2 shrink-1 grow-0">
@@ -196,7 +196,7 @@ export default function ContactUs() {
             <div>
               <button
                 type="submit"
-                className="w-full md:w-1/2 px-6 py-2 bg-black text-white hover:bg-[#22a0afb3] "
+                className="w-full md:min-w-[200px] cursor-pointer md:w-1/2 px-6 py-4 bg-black text-white hover:bg-[#22a0afb3] "
               >
                 Submit
               </button>
