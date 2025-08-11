@@ -12,29 +12,28 @@ const Robotics = () => {
     <>
       <section className="py-16 px-16 m-auto h-screen md:h-[85vh] w-screen bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${dimage})` }}>
-        <h1 className="text-3lg m-auto px-2 md:text-5xl md:mt-40 md:px-4 text-white">Anvi Robotics</h1>
-        <p className="text-sm px-12 md:text-lg md:px-24 pt-4 text-white">Automation that thinks, acts, and adapts</p>
+        <h1 className="text-5xl mt-45 m-auto px-2 md:text-5xl md:mt-40 md:px-4 text-white">Anvi Robotics</h1>
+        <p className="text-lg px-12 md:text-lg md:px-24 pt-4 text-white">Automation that thinks, acts, and adapts</p>
         <Link to="/robotics" className="inline-block text-black bg-[#22a0af] mx-12 px-3 py-2 mt-2 md:mx-24 md:px-6 md:py-3 md:mt-3">Visit Site</Link>
       </section>
 
 
 
 
-
       <section className="bg-[#f4f4f4]">
-        <div className=" h-auto w-full text-center md:px-80 px-15 pb-20">
-          <h1 className="md:text-5xl md:pt-20 text-3xl pt-12 ">Our Services</h1>
+        <div className=" h-auto w-full text-center  px-15  py-10 m-auto max-w-[800px] ">
+          <h1 className="md:text-5xl md:pt-20 text-3xl pt-12  ">Our Services</h1>
           <p className="md:text-lg md:pt-8 text-lg pt-4">Blending intelligence with engineering, our robotics division is built to transform how humans interact with challenging environments on Earth. From rescue missions to industrial inspections, our robots are designed for purpose, precision, and performance.</p>
         </div>
 
 
-        <div className="bg-[#f4f4f4] flex flex-row max-md:flex-col md:grid-cols-2 md:px-15 px-5 ">
+        <div className="bg-[#f4f4f4] flex flex-row max-md:flex-col md:grid-cols-2 md:px-15 px-5 sticky top-4 ">
           <div className=" h-auto w-full bg-white max-md:rounded-t-4xl md:rounded-tl-4xl">
             <img src={svgimg1}></img>
-            <h1 className=" md:text-4xl md:px-10 md:pt-10 text-2xl px-10 pt-10">Surveillance Robot</h1>
+            <h1 className=" md:text-4xl md:px-10 md:pt-10 text-3xl px-10 pt-10 font-bold">Surveillance Robot</h1>
             <p className=" md:text-lg md:px-10 md:pt-10 text-lg px-10 pt-5">“Intelligent eyes. Constant vigilance.”</p>
             <p className=" md:text-lg md:px-10 md:pt-7 text-lg px-10 pt-5">Designed for real-time monitoring in high-risk or remote environments, our autonomous surveillance robots integrate advanced vision systems, AI-powered threat detection, and rugged mobility. They support security operations, infrastructure monitoring, and defense readiness — anytime, anywhere.</p>
-            <p className="md:text-lg md:px-10 md:pt-7 text-lg px-10 pt-5">Always alert. Always aware.</p>
+            <p className="md:text-lg md:px-10 md:pt-7 text-lg px-10 pt-5 pb-5">Always alert. Always aware.</p>
           </div>
           <div className=" h-auto w-full bg-white md:rounded-tr-4xl  ">
             <img src={roboimg1} className="md:rounded-tr-4xl  "></img>
@@ -43,12 +42,12 @@ const Robotics = () => {
 
 
 
-        <div className="bg-[#f4f4f4] flex flex-row-reverse max-md:flex-col md:px-15 px-5 md:col-reverse">
+        <div className="bg-[#f4f4f4] flex flex-row-reverse max-md:flex-col md:px-15 px-5 md:col-reverse sticky top-4">
           <div className=" h-auto w-full bg-white md:rounded-tr-4xl max-md:rounded-t-4xl ">
             <img src={svgimg1}></img>
-            <h1 className=" md:text-4xl md:px-10 md:pt-10 text-2xl px-10 pt-10">Semi - Humanoid Robot</h1>
+            <h1 className=" md:text-4xl md:px-10 md:pt-10 text-3xl px-10 pt-10 font-bold">Semi - Humanoid Robot</h1>
             <p className=" md:text-lg md:px-10 md:pt-10 text-lg px-10 pt-5">“Engineered to Assist. Designed to Adapt.”</p>
-            <p className=" md:text-lg md:px-10 md:pt-7 text-lg px-10 pt-5">Our semi-humanoid platforms bridge the gap between machine intelligence and human interaction. Capable of natural communication, object handling, and situational awareness, these robots serve in frontline environments — from smart facilities and corporate spaces to healthcare and service sectors.</p>
+            <p className=" md:text-lg md:px-10 md:pt-7 text-lg px-10 pt-5 pb-5">Our semi-humanoid platforms bridge the gap between machine intelligence and human interaction. Capable of natural communication, object handling, and situational awareness, these robots serve in frontline environments — from smart facilities and corporate spaces to healthcare and service sectors.</p>
           </div>
           <div className=" h-auto w-full bg-white  ">
             <img src={roboimg2} className="md:rounded-tl-4xl  "></img>
@@ -57,21 +56,21 @@ const Robotics = () => {
 
 
 
-        <div className="bg-[#f4f4f4] grid md:grid-cols-2 md:px-15 px-5 rounded-tl-4xl">
+        <div className="bg-[#f4f4f4] grid md:grid-cols-2 md:px-15 px-5 rounded-tl-4xl sticky top-4">
           <div className=" h-auto w-full bg-black text-white md:rounded-tl-4xl max-md:rounded-t-4xl ">
             <img src={svgimg1}></img>
-            <h1 className=" md:text-4xl md:px-10 md:pt-10 text-2xl px-10 pt-10">Sludge Robot</h1>
+            <h1 className=" md:text-4xl md:px-10 md:pt-10 text-3xl px-10 pt-10 font-black">Sludge Robot</h1>
             <p className=" md:text-lg md:px-10 md:pt-10 text-lg px-10 pt-5">“Built for extremes. Optimized for impact.”</p>
-            <p className=" md:text-lg md:px-10 md:pt-7 text-lg px-10 pt-5">Designed to operate in hazardous, submerged, or contaminated environments, our sludge-removal robots are redefining how industries manage waste and maintenance. Fully equipped with corrosion-resistant builds, environmental sensors, and autonomous navigation, they deliver precision where humans cannot go.</p>
+            <p className=" md:text-lg md:px-10 md:pt-7 text-lg px-10 pt-5 pb-5">Designed to operate in hazardous, submerged, or contaminated environments, our sludge-removal robots are redefining how industries manage waste and maintenance. Fully equipped with corrosion-resistant builds, environmental sensors, and autonomous navigation, they deliver precision where humans cannot go.</p>
           </div>
           <div className=" h-auto w-full bg-white  ">
             <img src={roboimg3} className="md:rounded-tr-4xl  "></img>
           </div>
         </div>
       </section>
-      <section className="bg-[#f4f4f4] md:py-15 md:px-45 m-auto h-auto w-screen px-5 mb-20 ">
+      <section className="bg-[#f4f4f4] md:py-15 md:px-45 m-auto h-auto w-screen px-3 mb-20 ">
         <div className="bg-black text-white text-center md:rounded-4xl md:p-20 p-10 rounded-2xl ">
-          <h1 className="md:text-4xl md:mb-5 text-lg mb-3">Innovation at the Core</h1>
+          <h1 className="md:text-4xl md:mb-5 text-2xl mb-3 font-bold">Innovation at the Core</h1>
           <p className="md:text-md md:mb-5">Every robotic system we build reflects our commitment to innovation, reliability, and real-world application. From semi-humanoid assistants to industrial-grade cleaning bots, ANVI robotics delivers performance where it matters most.</p>
           <p className="md:text-md md:mb-5">Enabling automation with intelligence. Powering progress with purpose</p>
         </div>
