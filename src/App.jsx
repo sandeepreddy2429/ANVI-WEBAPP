@@ -6,6 +6,8 @@ import Insights from "./pages/Insights";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
+import TermsAndConditions from "./pages/TermsandConditions";
+import Disclaimer from "./pages/Disclaimer";
 
 import Robotics from "./pages/Expertise/Robotics";
 import Space from "./pages/Expertise/Space";
@@ -34,6 +36,8 @@ function App() {
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
 
           {/* Expertise subpages */}
           <Route path="/robotics" element={<Robotics />} />
