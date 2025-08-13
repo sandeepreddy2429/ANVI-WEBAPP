@@ -4,7 +4,7 @@ import ContactUs from '../components/ContactUs';
 export default function TermsAndConditions() {
   return (
     <>
-    <section className="min-h-screen  bg-white md:flex items-start justify-center md:py-6  ">
+    <section className="footer-pages min-h-screen  bg-white md:flex items-start justify-center md:py-6  ">
       <div className=" w-full max-w-[1600px] md:px-15 px-5 py-8">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
           Terms & Conditions

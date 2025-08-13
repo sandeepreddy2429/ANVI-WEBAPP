@@ -82,10 +82,12 @@ export default function Footer() {
             >
               <FaLocationDot size={20} color="#333" />
               <span>
-                Profound Builders, <br />
+                <address>
+                  1st Floor, Modern Profound Tech Park, <br />
                 Whitefields, Kondapur,
                 <br />
                 Telangana 500081
+                </address>
               </span>
             </a>
             <a
@@ -128,8 +130,10 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="text-sm space-y-2 text-left ">
+        <div className="text-sm space-y-2 flex flex-col gap-0.2">
           <Link to={pagesLinks.privacypolicy}>Privacy Policy</Link>
+          <Link to={pagesLinks["terms-and-conditions"]}>Terms & Conditions</Link>
+          <Link to={pagesLinks.disclaimer}>Disclaimer</Link>
           {/* Footer Bottom */}
         </div>
       </div>

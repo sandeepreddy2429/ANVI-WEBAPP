@@ -5,6 +5,8 @@ const pagesLinks = {
     'insights': '/insights',
     'contact': '/contact',
     'privacypolicy': '/privacy-policy',
+    'terms-and-conditions': '/terms-and-conditions',
+    'disclaimer': '/disclaimer',
 
     // expertises
     'expertiseLinks' : {

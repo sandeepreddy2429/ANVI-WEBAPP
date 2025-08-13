@@ -21,7 +21,7 @@ export default function About() {
           </div>
 
           {/* Right Side Content */}
-          <div className="text-gray-900 max-w-full md:max-w-[50%] space-y-5 w-full md:m-10 md:p-10 text-lg md:text-xl">
+          <div className="text-gray-900 max-w-full md:max-w-[50%] space-y-5 w-full p-3 text-lg md:text-xl">
             <b className="block mt-5">➤ ABOUT ANVI</b>
 
             <p>
@@ -60,7 +60,7 @@ export default function About() {
           </div>
 
           {/* Right Side Content */}
-          <div className="text-gray-900 max-w-full md:max-w-[50%] w-full md:m-10 md:p-10 text-lg md:text-xl flex flex-col gap-4">
+          <div className="text-gray-900 max-w-full md:max-w-[50%] space-y-5 w-full p-3 text-lg md:text-xl">
             <b className="font-light text-gray-950">➤ WHO WE ARE</b>
             <p>
               Founded by a team of visionary leaders, scientists, creators, and

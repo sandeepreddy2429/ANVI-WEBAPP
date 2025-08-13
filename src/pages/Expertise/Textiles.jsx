@@ -1,33 +1,55 @@
-import React from 'react';
-import { useState } from 'react';
-import ContactUs from '../../components/ContactUs';
-import { sections } from '../../components/textilesContent';
+import React from "react";
+import { useState } from "react";
+import ContactUs from "../../components/ContactUs";
+import { sections } from "../../components/textilesContent";
+import { Link } from "react-router-dom";
+import pagesLinks from "../../data/pagesLinks";
 
-const image1="https://static.wixstatic.com/media/7ab3a8_56062bf596204067b44aef8c221474b2~mv2.png/v1/fill/w_2219,h_965,fp_0.50_0.50,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/7ab3a8_56062bf596204067b44aef8c221474b2~mv2.png"
-
+const image1 =
+  "https://static.wixstatic.com/media/7ab3a8_56062bf596204067b44aef8c221474b2~mv2.png/v1/fill/w_2219,h_965,fp_0.50_0.50,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/7ab3a8_56062bf596204067b44aef8c221474b2~mv2.png";
 
 export default function Textiles() {
   const [activeIndex, setActiveIndex] = useState(0);
- 
+
   return (
     <>
-    <section className='w-full h-[85vh]  bg-cover bg-center'style={{ backgroundImage: `url(${image1})` }}>
-      <div className="md:pt-60 pt-60">
-      <h1 className='text-4xl md:text-5xl text-white md:px-20 md:pb-5 font-bold px-10'>Textiles</h1>
-      <p className='text-white md:px-40 md:text-lg text-lg px-20'>Comfort and technology in perfect harmony.</p>
-      </div>
-    </section>
+      <section
+        className="h-[90vh] md:min-h-[80vh] max-h-screen object-contain w-screen bg-cover bg-left max-md:bg-center bg-no-repeat flex flex-col justify-center p-10 md:p-15"
+        style={{
+          backgroundImage: `url(${image1})`,
+        }}
+      >
+        <div className="text-white flex flex-col gap-2 justify-start align-middle text-shadow-xl">
+          <h1 className="text-5xl text-shadow-gray-900">Textiles</h1>
+          <p className="text-xl text-shadow-gray-900">
+            Comfort and technology in perfect harmony.
+          </p>
+          <Link
+            to={pagesLinks.expertiseLinks.Textiles}
+            className="hero-link max-w-max mt-5 bg-[#22a0af] px-10 py-3 hover:rounded-sm hover:px-15 transition-all duration-110 hover:bg-green-800"
+          >
+            Visit Site
+          </Link>
+        </div>
+      </section>
 
-    <section className='w-full bg-white  mx-auto'>
-      <div className=' mx-auto px-10 py-10 md:max-w-[1000px]'>
-        <h1 className='text-3xl md:text-3xl font-bold mb-5 '>About Textiles</h1>
-        <p className='text-lg md:text-xl'>Anvi is India’s first AI-powered tailoring platform for men, combining technology with traditional craftsmanship to offer custom-made formal and ethnic wear. We aim to provide a seamless, personalized shopping experience that blends style, precision, and convenience.</p>
-      </div>
+      <section className="w-full py-15 px-5 bg-white mx-auto">
+        <div className=" mx-auto md:max-w-[1600px]">
+          <h1 className="text-3xl md:text-3xl font-bold mb-5">
+            About Textiles
+          </h1>
+          <p className="text-lg md:text-xl">
+            Anvi is India’s first AI-powered tailoring platform for men,
+            combining technology with traditional craftsmanship to offer
+            custom-made formal and ethnic wear. We aim to provide a seamless,
+            personalized shopping experience that blends style, precision, and
+            convenience.
+          </p>
+        </div>
+      </section>
 
-    </section>
-    
-    <section className="w-full bg-white py-10">
-        <div className="max-w-screen mx-auto px-8 ">
+      <section className="w-full bg-white py-10 max-w-[1600px] m-auto mb-15">
+        <div className="max-w-screen mx-auto">
           {/* Titles */}
           <div className="flex flex-wrap md:text-xl text-lg border-b ">
             {sections.map((sec, i) => (
@@ -47,17 +69,14 @@ export default function Textiles() {
 
           {/* Description with fade-in */}
           <div key={activeIndex} className="mt-6 animate-fadeIn">
-            <div className=" leading-relaxed max-md:px-2 px-10">
+            <div className="leading-relaxed max-md:px-2 px-10">
               {sections[activeIndex].content}
             </div>
           </div>
         </div>
       </section>
 
-
-    <ContactUs />
-
+      <ContactUs />
     </>
-    
-  )
+  );
 }

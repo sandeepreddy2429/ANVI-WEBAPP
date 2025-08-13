@@ -3,7 +3,7 @@ import ContactUs from '../components/ContactUs';
 export default function Disclaimer() {
   return (
     <>
-    <section className="min-h-screen bg-white flex items-start justify-center md:grow max-md:px-0 px-10 ">
+    <section className="footer-pages min-h-screen bg-white flex items-start justify-center md:grow max-md:px-0 px-10 ">
       <div className="max-w-[1600px] h-auto w-full p-8 ">
         <h1 className="text-4xl md:text-6xl font-bold md:mb-10 mb-5 text-gray-900">Disclaimer</h1>
         

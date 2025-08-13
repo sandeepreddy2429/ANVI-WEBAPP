@@ -1,25 +1,32 @@
-import React from 'react'
-import ContactUs from '../../components/ContactUs'
+import { Link } from "react-router-dom";
+import ContactUs from "../../components/ContactUs";
+import pagesLinks from "../../data/pagesLinks";
 
 export default function Entertainment() {
   return (
     <>
-      <section className="relative w-full bg-cover bg-center">
-        <div>
-          <img src="https://static.wixstatic.com/media/7ab3a8_02a65fd46924489b91df1aa8ab41e9d7~mv2.png/v1/fill/w_1891,h_823,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/7ab3a8_02a65fd46924489b91df1aa8ab41e9d7~mv2.png" alt="" />
-        </div>
-        <div className="absolute inset-0 flex flex-col justify-center items-start  sm:px-12">
-          <h1 className="text-white sm:text-5xl mb-2">
-            Entertainment
-          </h1>
-          <p className="text-white text-base  mb-4">
-
+      <section
+        className="h-[90vh] md:min-h-[80vh] max-h-screen object-cover w-screen bg-cover bg-left max-md:bg-center bg-no-repeat flex flex-col justify-center p-10 md:p-15"
+        style={{
+          backgroundImage:
+            "url(https://static.wixstatic.com/media/7ab3a8_02a65fd46924489b91df1aa8ab41e9d7~mv2.png/v1/fill/w_1891,h_823,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/7ab3a8_02a65fd46924489b91df1aa8ab41e9d7~mv2.png)",
+        }}
+      >
+        <div className="text-white flex flex-col gap-2 justify-start align-middle text-shadow-xl">
+          <h1 className="text-5xl text-shadow-gray-900">Entertainment </h1>
+          <p className="text-xl text-shadow-gray-900">
             Immersive stories, limitless creativity.
           </p>
+          <Link
+            to={pagesLinks.expertiseLinks.Entertainment}
+            className="hero-link max-w-max mt-5 bg-[#22a0af] px-10 py-3 hover:rounded-sm hover:px-15 transition-all duration-110 hover:bg-green-800"
+          >
+            Visit Site
+          </Link>
         </div>
       </section>
 
       <ContactUs />
     </>
-  )
+  );
 }

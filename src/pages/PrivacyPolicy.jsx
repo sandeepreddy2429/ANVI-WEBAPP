@@ -4,7 +4,7 @@ import ContactUs from '../components/ContactUs'
 export default function PrivacyPolicy() {
   return (
     <>
-    <section className='relative w-full bg-cover bg-center p-5  sm:flex-col max-w-7xl m-auto min-h-screen'>
+    <section className='footer-pages relative w-full bg-cover bg-center p-5  sm:flex-col max-w-7xl m-auto min-h-screen'>
       <div className='max-w-5xl'>
         <h1 className='text-5xl font-semibold text-start my-15'>
           Privacy Policy
