@@ -6,7 +6,7 @@ import Insights from "./pages/Insights";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
-import TermsAndConditions from "./pages/TermsandConditions";
+import TermsAndConditions from "./pages/TermsAndConditions";
 import Disclaimer from "./pages/Disclaimer";
 
 import Robotics from "./pages/Expertise/Robotics";
